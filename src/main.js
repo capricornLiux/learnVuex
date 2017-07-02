@@ -25,6 +25,16 @@ let store = new Vuex.Store({
     decrement(state, price){
       state.totalPrice -= price;
     }
+  },
+
+  actions: {
+    increase(context, price) {
+      context.commit('increment', price);
+    },
+
+    decrease(context, price){
+      context.commit('decrement', price);
+    }
   }
 });
 

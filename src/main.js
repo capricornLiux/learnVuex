@@ -17,6 +17,13 @@ let store = new Vuex.Store({
     totalPrice: 0
   },
 
+  // getters获取状态集里面的数据
+  getters: {
+      getTotal(state){
+        return state.totalPrice;
+      }
+  },
+
   mutations: {
     increment(state, price){
       state.totalPrice += price;

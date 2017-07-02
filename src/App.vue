@@ -25,7 +25,8 @@ export default {
   // 定义计算型属性
   computed : {
       totalPrice() {
-        return this.$store.state.totalPrice;
+//        return this.$store.state.totalPrice;
+        return this.$store.getters.getTotal;
       }
   }
 }

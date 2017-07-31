@@ -7,6 +7,8 @@
     <apple></apple>
     <banana></banana>
 
+    <test></test>
+
   </div>
 </template>
 
@@ -14,12 +16,14 @@
 //import Hello from './components/Hello'
 import Apple from './components/apple.vue'
 import Banana from './components/banana.vue'
+import test from './components/test.vue'
 export default {
   name: 'app',
   components: {
 //    Hello
     Apple,
-    Banana
+    Banana,
+    test
   },
 
   // 定义计算型属性

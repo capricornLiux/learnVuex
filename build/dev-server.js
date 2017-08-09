@@ -9,25 +9,6 @@ var opn = require('opn')
 var path = require('path')
 var express = require('express')
 
-/*
-// 进行数据mock
-
-var appData = require('../data.json');
-
-var items = appData.items;
-
-var apiRoutes = express.Router();
-
-apiRoutes.get('/items', function (req, res) {
-  res.json({
-    errno:0,
-    data:items
-  });
-});
-
-// 进行数据mock结束
-*/
-
 var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = require('./webpack.dev.conf')

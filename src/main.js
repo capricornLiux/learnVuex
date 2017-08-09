@@ -6,15 +6,10 @@ import App from './App'
 // 导入vuex
 import Vuex from 'vuex'
 
-// 导入axios
-import axios from 'axios'
-
 Vue.config.productionTip = false
 
 // 使用use进行注册
 Vue.use(Vuex);
-
-Vue.prototype.$http = axios;
 
 // 进行vuex配置
 let store = new Vuex.Store({

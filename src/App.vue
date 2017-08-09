@@ -11,9 +11,11 @@
 </template>
 
 <script>
-  //import Hello from './components/Hello'
+
   import Apple from './components/apple.vue'
   import Banana from './components/banana.vue'
+
+  import {mapGetters} from 'vuex'
 
   export default {
     name: 'app',
@@ -24,10 +26,9 @@
 
     // 定义计算型属性
     computed: {
-      totalPrice() {
-//        return this.$store.state.totalPrice;
-        return this.$store.getters.getTotal;
-      }
+      ...mapGetters([
+        'totalPrice'
+      ])
     }
   }
 </script>

@@ -7,6 +7,7 @@
 </template>
 
 <script>
+  import {mapMutations} from 'vuex';
   export default {
     data(){
       return {
@@ -17,14 +18,18 @@
 
     methods: {
       addOne(){
-//        this.$store.commit('increment', this.price);
-        this.$store.dispatch('increase', this.price);
+        this.increase(this.price);
       },
 
       minusOne(){
-//        this.$store.commit('decrement', this.price);
-        this.$store.dispatch('decrease', this.price);
-      }
+        this.decrease(this.price);
+      },
+
+      // 使用语法糖
+      ...mapMutations({
+        increase: 'INCREMENT',
+        decrease: 'DECREMENT'
+      })
     }
   }
 </script>

@@ -11,28 +11,46 @@
 
   import {mapMutations} from 'vuex';
 
+  import {mapActions} from 'vuex';
+
   export default {
     data(){
       return {
         msg: 'apple',
-        price: 5
+        price: 5,
+        // 重量kg
+        weight: 1
       }
     },
 
     methods: {
       addOne(){
-        this.increase(this.price);
+//        this.increase(this.price);
+        this.appleAdd({
+          price: this.price,
+          weight: this.weight
+        });
       },
 
       minusOne(){
-        this.decrease(this.price);
+//        this.decrease(this.price);
+        this.appleSub({
+          price: this.price,
+          weight: this.weight
+        });
       },
 
       // 使用语法糖
       ...mapMutations({
-        increase: 'INCREMENT',
-        decrease: 'DECREMENT'
-      })
+//        increase: 'INCREMENT',
+//        decrease: 'DECREMENT'
+      }),
+
+      ...mapActions([
+        'appleAdd',
+        'appleSub'
+      ])
+
     }
   }
 </script>

@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <!--<hello></hello>-->
 
+    <span>总价</span>
     {{totalPrice}}
+
+    <br>
+
+    <span>总重量</span>
+    {{totalWeight}}
+
     <apple></apple>
     <banana></banana>
 
@@ -27,7 +33,8 @@
     // 定义计算型属性
     computed: {
       ...mapGetters([
-        'totalPrice'
+        'totalPrice',
+        'totalWeight'
       ])
     }
   }
